@@ -1,1 +1,26 @@
-<p>home works!</p>
+<app-navbar></app-navbar>
+
+
+<h1>
+    My Users
+</h1>
+<ul class="users">
+    <li *ngFor="let user of users" (click)="onSelect(user)">
+        <span class="badge">{{user.id}}</span>
+        {{user.name}}
+    </li>
+</ul>
+
+
+<div *ngIf="selectedUser">
+
+<div>
+    
+    <div><span>id: </span>{{selectedUser.id}}</div>
+    <label for="user-name">User Name: </label>
+    <h2>{{selectedUser.name | uppercase}}</h2>
+    <input  id="user-name" [(ngModel)]="selectedUser.name" placeholder="name">
+</div>
+
+
+</div>    

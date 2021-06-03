@@ -13,7 +13,8 @@ import { RegisterComponent } from './screens/register/register.component';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+
   ]
 })
 export class UserModule { }
