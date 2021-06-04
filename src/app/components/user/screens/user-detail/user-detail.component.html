@@ -1,0 +1,4 @@
+<div *ngIf="selectedUser">
+    <h1>{{ selectedUser.name }} - {{ selectedUser.id }}</h1>
+    <h3><input [(ngModel)]="selectedUser.name"></h3>
+</div>    

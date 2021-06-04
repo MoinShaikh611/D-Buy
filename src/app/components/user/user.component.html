@@ -1,2 +1,27 @@
-user
+    
+
+
+<div *ngIf="route.children.length === 0">
+    <ul>
+        <li *ngFor="let user of users" 
+        [class.selected]="user === selectedUser"
+        (click)="onSelect(user)">
+        {{user.id}} : {{user.name}}
+        </li>
+    </ul>
+
+    <ul>
+
+        <li *ngFor="let getUser of getUsersFromUserService">
+            {{getUser | json}}
+        </li>
+        </ul>
+
+    <app-user-detail [selectedUser]="selectedUser"></app-user-detail>
+    
+    <app-messages></app-messages>
+
+</div>
+
+
 <router-outlet></router-outlet>
